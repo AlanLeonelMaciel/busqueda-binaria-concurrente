@@ -31,7 +31,7 @@ public class BusquedaBinariaConcurrente {
                 int index = Arrays.binarySearch(vector, start, end, valorBuscado);
                 // Si lo encuentra y es el primero en hacerlo, guarda el resultado
                 if (index >= 0 && encontrado.compareAndSet(false, true)) {
-                    resultado.set(index); // ¡OJO! Aquí falta sumar 'start' para índice global
+                    resultado.set(index);
                 }
             });
 
